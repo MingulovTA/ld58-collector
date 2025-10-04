@@ -8,6 +8,7 @@ public class Main : MonoBehaviour
 
     [SerializeField] private Girl _girl;
     [SerializeField] private FadeScreenService _fadeScreenService;
+    [SerializeField] private DialogService _dialogService;
     
     private InputService _inputService;
     private ICoroutineRunner _coroutineRunner;
@@ -18,6 +19,7 @@ public class Main : MonoBehaviour
     public Game Game => _game;
     public Girl Girl => _girl;
     public FadeScreenService FadeScreenService => _fadeScreenService;
+    public DialogService DialogService => _dialogService;
 
 
     private void Awake()
