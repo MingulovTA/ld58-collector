@@ -4,7 +4,7 @@ using UnityEngine;
 public class Girl : MonoBehaviour
 {
     [SerializeField] private float _speed;
-    
+    [SerializeField] private CharacterController _characterController;   
     [SerializeField] private GirlView _girlView;
     
     private int _direction = 1;
