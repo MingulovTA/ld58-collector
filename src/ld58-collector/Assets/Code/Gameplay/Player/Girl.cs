@@ -20,7 +20,6 @@ public class Girl : MonoBehaviour
     private void Update()
     {
         var inputX = Main.I.InputService.GetAxis(HORIZONTAL);
-Debug.Log("inputX = "+inputX);
         if (Math.Abs(inputX) > 0.01f)
         {
             Move(inputX);

@@ -1,0 +1,11 @@
+using UnityEngine;
+
+public enum Inv
+{
+    None = 0,
+    Pendant =1, 
+    Wrapper = 2,
+    Doll = 3,
+    Picture = 4,
+    Flower = 5
+}

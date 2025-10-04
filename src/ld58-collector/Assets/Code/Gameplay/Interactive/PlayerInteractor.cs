@@ -31,4 +31,9 @@ public class PlayerInteractor : MonoBehaviour
                 _target.Intecact(this);
         }
     }
+
+    public void Disable()
+    {
+        _target = null;
+    }
 }

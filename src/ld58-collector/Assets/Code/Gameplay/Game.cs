@@ -1,18 +1,20 @@
+using System;
 using System.Collections;
 using System.Linq;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 public class Game
 {
     private GameState _gameState;
     private ICoroutineRunner _coroutineRunner;
-    
-    public GameState GameState => _gameState;
-
     private RoomView _currentRoomView;
     private RoomId _lastRoomId;
 
+
+    public GameState GameState => _gameState;
     public RoomView CurrentRoomView => _currentRoomView;
+    public event Action OnGameStateUpdate;
 
     public Game(ICoroutineRunner coroutineRunner)
     {
@@ -35,7 +37,7 @@ public class Game
 
         _currentRoomView = Resources.Load<RoomView>($"Rooms/{newRoom}");
         _currentRoomView = Object.Instantiate(_currentRoomView);
-
+        _gameState.CurrentRoomId = _currentRoomView.RoomId;
         DoorView doorView = null;
         if (_lastRoomId == RoomId.None)
         {
@@ -62,5 +64,11 @@ public class Game
         Main.I.InputService.RemoveLocker(this);
         if (doorView!=null)
             doorView.CloseAnim();
+    }
+
+    public void AddTreasure(TreasuresId treasuresId)
+    {
+        _gameState.TreasuresIds.Add(treasuresId);
+        OnGameStateUpdate?.Invoke();
     }
 }

@@ -10,6 +10,7 @@ public class RoomView : MonoBehaviour
     [SerializeField] private Transform _rightAnchor;
     [SerializeField] private Transform _girlSpawnWp;
     [SerializeField] private List<DoorView> _doorsViews;
+    [SerializeField] private bool _isCameraFollow = true;
     private Girl _girl;
 
     private Vector3 _camPos;
@@ -29,6 +30,12 @@ public class RoomView : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (!_isCameraFollow)
+        {
+            _camPos.x = 0;
+            Camera.main.transform.position = _camPos;
+            return;
+        }
         UpdateCameraHalfWidth();
 
         _camPos.x = _girl.transform.position.x;
