@@ -8,11 +8,10 @@ public class Girl : MonoBehaviour
     [SerializeField] private GirlView _girlView;
     
     private int _direction = 1;
-    private Vector3 _pos;
+    private Vector3 _velocity;
     
     private void Awake()
     {
-        _pos = transform.position;
         _girlView.SetState(GirlStateId.Idle);
     }
 
@@ -29,6 +28,9 @@ public class Girl : MonoBehaviour
         {
             Stop();
         }
+
+        _velocity.y = -10;
+        _characterController.Move(_velocity*Time.deltaTime);
     }
 
     private void Move(float dx)
@@ -38,9 +40,7 @@ public class Girl : MonoBehaviour
             _girlView.SetDirection(1);
         else
             _girlView.SetDirection(-1);
-        
-        _pos.x += dx * _speed * Time.deltaTime;;
-        transform.position = _pos;
+        _velocity.x = dx * _speed;
     }
 
     private void Stop()
