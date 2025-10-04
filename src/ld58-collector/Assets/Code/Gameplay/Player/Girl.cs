@@ -12,7 +12,7 @@ public class Girl : MonoBehaviour
     private int _direction = 1;
     private Vector3 _velocity;
     
-    private void Awake()
+    private void Start()
     {
         _girlView.SetState(GirlStateId.Idle);
     }
@@ -47,5 +47,12 @@ public class Girl : MonoBehaviour
     private void Stop()
     {
         _girlView.SetState(GirlStateId.Idle);
+    }
+
+    public void TeleportTo(Transform girlSpawnWp)
+    {
+        _characterController.enabled = false;
+        transform.position = girlSpawnWp.position;
+        _characterController.enabled = true;
     }
 }

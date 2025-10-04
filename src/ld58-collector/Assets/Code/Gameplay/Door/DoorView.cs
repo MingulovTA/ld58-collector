@@ -6,6 +6,8 @@ public class DoorView : MonoBehaviour, IInteractible
     [SerializeField] private GameObject _opened;
     [SerializeField] private GameObject _closed;
 
+    public RoomId NextRoom => _nextRoom;
+
     public void Intecact()
     {
         Main.I.Game.LoadRoom(_nextRoom);
