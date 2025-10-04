@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Girl : MonoBehaviour
 {
+    private const string HORIZONTAL = "Horizontal";
+    
     [SerializeField] private float _speed;
     [SerializeField] private CharacterController _characterController;   
     [SerializeField] private GirlView _girlView;
@@ -17,8 +19,7 @@ public class Girl : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(Input.GetAxis("Horizontal"));
-        var inputX = Input.GetAxis("Horizontal");
+        var inputX = Main.I.InputService.GetAxis(HORIZONTAL);
 
         if (Math.Abs(inputX) > 0.01f)
         {
