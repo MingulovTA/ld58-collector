@@ -20,7 +20,7 @@ public class Girl : MonoBehaviour
     private void Update()
     {
         var inputX = Main.I.InputService.GetAxis(HORIZONTAL);
-
+Debug.Log("inputX = "+inputX);
         if (Math.Abs(inputX) > 0.01f)
         {
             Move(inputX);
@@ -28,6 +28,7 @@ public class Girl : MonoBehaviour
         else
         {
             Stop();
+            _velocity.x = 0;
         }
 
         _velocity.y = -10;
@@ -52,7 +53,7 @@ public class Girl : MonoBehaviour
     public void TeleportTo(Transform girlSpawnWp)
     {
         _characterController.enabled = false;
-        transform.position = girlSpawnWp.position;
+        transform.position = new Vector3(girlSpawnWp.position.x,girlSpawnWp.position.y,transform.position.z);
         _characterController.enabled = true;
     }
 }

@@ -1,6 +1,5 @@
 using _WebGLFramework.Services.Runners;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Main : MonoBehaviour
 {
@@ -8,6 +7,8 @@ public class Main : MonoBehaviour
     public static Main I => _instance;
 
     [SerializeField] private Girl _girl;
+    [SerializeField] private FadeScreenService _fadeScreenService;
+    
     private InputService _inputService;
     private ICoroutineRunner _coroutineRunner;
     private Game _game;
@@ -16,6 +17,7 @@ public class Main : MonoBehaviour
     public ICoroutineRunner CoroutineRunner => _coroutineRunner;
     public Game Game => _game;
     public Girl Girl => _girl;
+    public FadeScreenService FadeScreenService => _fadeScreenService;
 
 
     private void Awake()
@@ -33,7 +35,7 @@ public class Main : MonoBehaviour
     {
         _inputService = new InputService();
         _coroutineRunner = GetCoroutineRunner();
-        _game = new Game();
+        _game = new Game(_coroutineRunner);
         _game.Run();
     }
     

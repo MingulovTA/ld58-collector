@@ -3,6 +3,12 @@ using UnityEngine;
 public class PlayerInteractor : MonoBehaviour
 {
     private IInteractible _target;
+    private InputService _inputService;
+
+    private void Awake()
+    {
+        _inputService = Main.I.InputService;
+    }
     private void OnTriggerEnter(Collider collider)
     {
         var target = collider.GetComponent<IInteractible>();
@@ -19,12 +25,10 @@ public class PlayerInteractor : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space))
+        if (_inputService.GetKeyDown(KeyCode.Return) || _inputService.GetKeyDown(KeyCode.E) || _inputService.GetKeyDown(KeyCode.Space))
         {
             if (_target != null)
-            {
-                _target.Intecact();
-            }
+                _target.Intecact(this);
         }
     }
 }
