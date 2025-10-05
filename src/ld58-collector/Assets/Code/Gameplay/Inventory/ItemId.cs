@@ -1,16 +1,8 @@
-using UnityEngine;
-
-public class ItemId : MonoBehaviour
+public enum ItemId
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    None = 0,
+    Thread = 1,
+    Needle = 2,
+    YouEar = 3,
+    Vinyl = 4,
 }

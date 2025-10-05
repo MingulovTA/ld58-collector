@@ -10,6 +10,7 @@ public class RoomView : MonoBehaviour
     [SerializeField] private Transform _rightAnchor;
     [SerializeField] private Transform _girlSpawnWp;
     [SerializeField] private List<DoorView> _doorsViews;
+    [SerializeField] private List<SqmObjectState> _sqmObjectStates;
     [SerializeField] private bool _isCameraFollow = true;
     private Girl _girl;
 
@@ -55,5 +56,6 @@ public class RoomView : MonoBehaviour
     private void OnValidate()
     {
         _doorsViews = GetComponentsInChildren<DoorView>().ToList();
+        _sqmObjectStates = GetComponentsInChildren<SqmObjectState>().ToList();
     }
 }
