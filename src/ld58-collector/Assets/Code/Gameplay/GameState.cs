@@ -7,5 +7,12 @@ public class GameState
     public RoomId CurrentRoomId;
     public List<TreasuresId> TreasuresIds = new List<TreasuresId>();
     public List<ItemId> Inventory = new List<ItemId>();
-    public Dictionary<string, string> CheckStates = new Dictionary<string, string>();
+
+    public Dictionary<string, string> CheckStates = new Dictionary<string, string>
+    {
+        {"Needle", "InSitu"},
+        {"Thread", "InSitu"},
+        {"ParentSkaf", "InSitu"},
+        {"ParentSkatulka", "InSitu"},
+    };
 }

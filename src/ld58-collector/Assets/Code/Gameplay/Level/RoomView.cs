@@ -55,8 +55,8 @@ public class RoomView : MonoBehaviour
 
     private void OnValidate()
     {
-        _doorsViews = GetComponentsInChildren<DoorView>().ToList();
-        _sqmObjectStates = GetComponentsInChildren<SqmObjectState>().ToList();
+        _doorsViews = GetComponentsInChildren<DoorView>(true).ToList();
+        _sqmObjectStates = GetComponentsInChildren<SqmObjectState>(true).ToList();
     }
 
     private void OnEnable()

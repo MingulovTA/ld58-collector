@@ -138,6 +138,28 @@ TextureImporter:
     nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  userData: 
+  userData: '{"fileNaming":"PrefixGroupNames","groupMode":"FullPath","PackingTag":null,"TargetDirectory":"Assets/Textures/Gameplay/Rooms/ParentsRoom","AutoImport":false,"DefaultAlignment":"Center","DefaultPivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","DocAlignment":"Center","DocPivot":{"x":0.5,"y":0.5},"DocRoot":{"name":"DOCUMENT_ROOT","path":null,"indexId":[-1],"import":false,"useDefaults":false,"Alignment":"Center","Pivot":{"x":0.0,"y":0.0},"ScaleFactor":"Full","Childs":[{"name":"\u0413\u0440\u0443\u043f\u043f\u0430
+    1","path":"\u0413\u0440\u0443\u043f\u043f\u0430 1","indexId":[0],"import":true,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[{"name":"Parents
+    room","path":"\u0413\u0440\u0443\u043f\u043f\u0430 1/Parents room","indexId":[0,0],"import":true,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[]},{"name":"\u043f\u044f\u043b\u044c\u0446\u0430","path":"\u0413\u0440\u0443\u043f\u043f\u0430
+    1/\u043f\u044f\u043b\u044c\u0446\u0430","indexId":[0,1],"import":true,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[]},{"name":"\u043d\u0438\u0442\u043a\u0438","path":"\u0413\u0440\u0443\u043f\u043f\u0430
+    1/\u043d\u0438\u0442\u043a\u0438","indexId":[0,2],"import":true,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[]},{"name":"\u0434\u0432\u0435\u0440\u044c
+    1","path":"\u0413\u0440\u0443\u043f\u043f\u0430 1/\u0434\u0432\u0435\u0440\u044c
+    1","indexId":[0,3],"import":true,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[]},{"name":"\u0434\u0432\u0435\u0440\u044c
+    2","path":"\u0413\u0440\u0443\u043f\u043f\u0430 1/\u0434\u0432\u0435\u0440\u044c
+    2","indexId":[0,4],"import":true,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[]},{"name":"\u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0439
+    \u0448\u043a\u0430\u0444","path":"\u0413\u0440\u0443\u043f\u043f\u0430 1/\u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0439
+    \u0448\u043a\u0430\u0444","indexId":[0,5],"import":true,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[]},{"name":"\u0441\u043b\u043e\u043c\u0430\u043d\u043d\u044b\u0439
+    \u0448\u043a\u0430\u0444","path":"\u0413\u0440\u0443\u043f\u043f\u0430 1/\u0441\u043b\u043e\u043c\u0430\u043d\u043d\u044b\u0439
+    \u0448\u043a\u0430\u0444","indexId":[0,6],"import":true,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[]},{"name":"\u0448\u043a\u0430\u0442\u0443\u043b\u043a\u0430","path":"\u0413\u0440\u0443\u043f\u043f\u0430
+    1/\u0448\u043a\u0430\u0442\u0443\u043b\u043a\u0430","indexId":[0,7],"import":true,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[{"name":"\u0421\u043b\u043e\u0439
+    101","path":"\u0413\u0440\u0443\u043f\u043f\u0430 1/\u0448\u043a\u0430\u0442\u0443\u043b\u043a\u0430/\u0421\u043b\u043e\u0439
+    101","indexId":[0,7,0],"import":true,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[]},{"name":"\u0448\u043a\u0430\u0442\u0443\u043b\u043a\u0430
+    \u043e\u0442\u043a\u0440\u044b\u0442\u0430","path":"\u0413\u0440\u0443\u043f\u043f\u0430
+    1/\u0448\u043a\u0430\u0442\u0443\u043b\u043a\u0430/\u0448\u043a\u0430\u0442\u0443\u043b\u043a\u0430
+    \u043e\u0442\u043a\u0440\u044b\u0442\u0430","indexId":[0,7,1],"import":true,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[]},{"name":"\u0448\u043a\u0430\u0442\u0443\u043b\u043a\u0430
+    \u0437\u0430\u043a\u0440\u044b\u0442\u0430 ","path":"\u0413\u0440\u0443\u043f\u043f\u0430
+    1/\u0448\u043a\u0430\u0442\u0443\u043b\u043a\u0430/\u0448\u043a\u0430\u0442\u0443\u043b\u043a\u0430
+    \u0437\u0430\u043a\u0440\u044b\u0442\u0430 ","indexId":[0,7,2],"import":true,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[]},{"name":"\u043a\u0443\u043b\u043e\u043d","path":"\u0413\u0440\u0443\u043f\u043f\u0430
+    1/\u0448\u043a\u0430\u0442\u0443\u043b\u043a\u0430/\u043a\u0443\u043b\u043e\u043d","indexId":[0,7,3],"import":true,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[]}]}]}]}}'
   assetBundleName: 
   assetBundleVariant: 
