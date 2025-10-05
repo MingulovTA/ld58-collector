@@ -82,7 +82,7 @@ public class CutscenePage : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return)||Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Return)||Input.GetKeyDown(KeyCode.Space)||Input.GetMouseButtonDown(0))
             Skip();
     }
 }

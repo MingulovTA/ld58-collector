@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -29,6 +30,7 @@ public class Cutscene : MonoBehaviour
         else
         {
             _onComplete?.Invoke();
+            _pages.Last().gameObject.SetActive(true);
         }
     }
 }
