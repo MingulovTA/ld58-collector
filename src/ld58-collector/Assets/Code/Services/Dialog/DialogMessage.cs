@@ -18,7 +18,7 @@ public class DialogMessage : MonoBehaviour
     {
         Debug.Log("say");
         _inputService.AddLocker(this);
-        _dialogService.Show(_message,_title,OnComplete);
+        _dialogService.Show(_message,_title, OnComplete);
     }
 
     private void OnComplete()

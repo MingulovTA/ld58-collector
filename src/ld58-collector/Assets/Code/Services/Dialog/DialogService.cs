@@ -33,6 +33,7 @@ public class DialogService : MonoBehaviour
         _text.text = "";
         _textTitle.text = title;
         _onHide = onHide;
+        
         if (_coroutine != null)
         {
             StopCoroutine(_coroutine);
@@ -52,6 +53,7 @@ public class DialogService : MonoBehaviour
 
     private IEnumerator Animation(string text)
     {
+        yield return null;
         _isShowing = true;
         _bgAlphaTween?.Kill();
         _titleTween?.Kill();
