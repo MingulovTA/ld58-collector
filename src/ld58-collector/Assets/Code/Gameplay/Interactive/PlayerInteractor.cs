@@ -13,14 +13,22 @@ public class PlayerInteractor : MonoBehaviour
     {
         var target = collider.GetComponent<IInteractible>();
         if (target != null)
+        {
+            if (_target != null)
+                _target.Disable();
             _target = target;
+            _target.Enable();
+        }
     }
     
     private void OnTriggerExit(Collider collider)
     {
         var target = collider.GetComponent<IInteractible>();
         if (target != null)
+        {
+            _target.Disable();
             _target = null;
+        }
     }
 
     private void Update()

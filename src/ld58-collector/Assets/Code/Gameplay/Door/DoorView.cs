@@ -7,6 +7,7 @@ public class DoorView : MonoBehaviour, IInteractible
     [SerializeField] private RoomId _nextRoom;
     [SerializeField] private GameObject _opened;
     [SerializeField] private GameObject _closed;
+    [SerializeField] private GameObject _pointer;
 
     public RoomId NextRoom => _nextRoom;
 
@@ -21,11 +22,25 @@ public class DoorView : MonoBehaviour, IInteractible
         _game = Main.I.Game;
         _fadeScreenService = Main.I.FadeScreenService;
         _girl = Main.I.Girl;
+        if (_pointer!=null)
+            _pointer.SetActive(false);
     }
 
     public void Intecact(PlayerInteractor playerInteractor)
     {
         StartCoroutine(Enter());
+    }
+
+    public void Enable()
+    {
+        if (_pointer!=null)
+            _pointer.SetActive(true);
+    }
+
+    public void Disable()
+    {
+        if (_pointer!=null)
+            _pointer.SetActive(false);
     }
 
     private IEnumerator Enter()
@@ -49,9 +64,4 @@ public class DoorView : MonoBehaviour, IInteractible
         _opened.SetActive(true);
         _closed.SetActive(false);
     }
-}
-
-public interface IInteractible
-{
-    void Intecact(PlayerInteractor playerInteractor);
 }
