@@ -89,4 +89,13 @@ public class Game
             OnGameStateUpdate?.Invoke();
         }
     }
+
+    public void ChangeCheckpoint(string objectId, string newState)
+    {
+        if (_gameState.CheckStates[objectId] != newState)
+        {
+            _gameState.CheckStates[objectId] = newState;
+            OnGameStateUpdate?.Invoke();
+        }
+    }
 }

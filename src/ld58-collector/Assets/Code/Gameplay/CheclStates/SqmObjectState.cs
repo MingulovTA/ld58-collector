@@ -15,11 +15,16 @@ public class SqmObjectState : MonoBehaviour
     }
     public void Init()
     {
+        _game = Main.I.Game;
         if (!_game.GameState.CheckStates.ContainsKey(_objectId))
             _game.GameState.CheckStates.Add(_objectId,_state);
         _game.OnGameStateUpdate += UpdateView;
     }
 
+    private void Start()
+    {
+        UpdateView();
+    }
     public void Dispose()
     {
         _game.OnGameStateUpdate -= UpdateView;
@@ -27,6 +32,10 @@ public class SqmObjectState : MonoBehaviour
 
     private void UpdateView()
     {
+        if (!_game.GameState.CheckStates.ContainsKey(_objectId))
+            gameObject.SetActive(false);
+        else
+            gameObject.SetActive(_game.GameState.CheckStates[_objectId]==_state);
         
     }
 }

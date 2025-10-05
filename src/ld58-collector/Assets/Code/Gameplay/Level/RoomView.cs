@@ -58,4 +58,16 @@ public class RoomView : MonoBehaviour
         _doorsViews = GetComponentsInChildren<DoorView>().ToList();
         _sqmObjectStates = GetComponentsInChildren<SqmObjectState>().ToList();
     }
+
+    private void OnEnable()
+    {
+        foreach (var sqmObjectState in _sqmObjectStates)
+            sqmObjectState.Init();
+    }
+
+    private void OnDisable()
+    {
+        foreach (var sqmObjectState in _sqmObjectStates)
+            sqmObjectState.Dispose();
+    }
 }
