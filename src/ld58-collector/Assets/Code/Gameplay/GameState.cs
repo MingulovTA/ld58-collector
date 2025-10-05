@@ -14,5 +14,6 @@ public class GameState
         {"Thread", "InSitu"},
         {"ParentSkaf", "InSitu"},
         {"ParentSkatulka", "InSitu"},
+        {"Book", "InSitu"},
     };
 }
