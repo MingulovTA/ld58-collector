@@ -19,12 +19,9 @@ public class SqmObjectState : MonoBehaviour
         if (!_game.GameState.CheckStates.ContainsKey(_objectId))
             _game.GameState.CheckStates.Add(_objectId,_state);
         _game.OnGameStateUpdate += UpdateView;
-    }
-
-    private void Start()
-    {
         UpdateView();
     }
+    
     public void Dispose()
     {
         _game.OnGameStateUpdate -= UpdateView;

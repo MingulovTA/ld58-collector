@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ItemInteract : MonoBehaviour
+public class ItemInteract : MonoBehaviour, IInteractible
 {
     [SerializeField] private List<ItemId> _itemIds;
     
@@ -17,6 +17,7 @@ public class ItemInteract : MonoBehaviour
             if (!Main.I.Game.GameState.Inventory.Contains(itemId))
             {
                 _onFailed?.Invoke();
+                return;
             }
         }
         _onSuccess?.Invoke();
