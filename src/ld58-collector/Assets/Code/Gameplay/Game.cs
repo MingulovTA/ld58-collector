@@ -71,4 +71,22 @@ public class Game
         _gameState.TreasuresIds.Add(treasuresId);
         OnGameStateUpdate?.Invoke();
     }
+
+    public void AddItem(ItemId itemId)
+    {
+        if (!_gameState.Inventory.Contains(itemId))
+        {
+            _gameState.Inventory.Add(itemId);
+            OnGameStateUpdate?.Invoke();
+        }
+    }
+
+    public void RemoveItem(ItemId itemId)
+    {
+        if (_gameState.Inventory.Contains(itemId))
+        {
+            _gameState.Inventory.Remove(itemId);
+            OnGameStateUpdate?.Invoke();
+        }
+    }
 }
