@@ -24,7 +24,7 @@ public class PlayerInteractor : MonoBehaviour
     private void OnTriggerExit(Collider collider)
     {
         var target = collider.GetComponent<IInteractible>();
-        if (target != null)
+        if (target != null&&_target!=null&&_target==target)
         {
             _target.Disable();
             _target = null;

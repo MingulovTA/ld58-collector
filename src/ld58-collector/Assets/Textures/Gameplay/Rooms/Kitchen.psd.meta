@@ -1,0 +1,163 @@
+fileFormatVersion: 2
+guid: 889e857fe9c086a4d83d78e5824b5f09
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 1
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 0
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: '{"fileNaming":"PrefixGroupNames","groupMode":"FullPath","PackingTag":null,"TargetDirectory":"Assets/Textures/Gameplay/Rooms/Kitchen","AutoImport":false,"DefaultAlignment":"Center","DefaultPivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","DocAlignment":"Center","DocPivot":{"x":0.5,"y":0.5},"DocRoot":{"name":"DOCUMENT_ROOT","path":null,"indexId":[-1],"import":false,"useDefaults":false,"Alignment":"Center","Pivot":{"x":0.0,"y":0.0},"ScaleFactor":"Full","Childs":[{"name":"\u0442\u0435\u043d\u044c
+    ","path":"\u0442\u0435\u043d\u044c ","indexId":[0],"import":false,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[]},{"name":"\u043e\u0442\u0435\u0446","path":"\u043e\u0442\u0435\u0446","indexId":[1],"import":false,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[]},{"name":"\u0441\u0442\u0442\u0440\u0435\u043b\u043a\u0430","path":"\u0441\u0442\u0442\u0440\u0435\u043b\u043a\u0430","indexId":[2],"import":false,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[]},{"name":"\u0441\u0442\u0440\u0435\u043b\u043a\u0430","path":"\u0441\u0442\u0440\u0435\u043b\u043a\u0430","indexId":[3],"import":false,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[]},{"name":"\u0413\u0440\u0443\u043f\u043f\u0430
+    1","path":"\u0413\u0440\u0443\u043f\u043f\u0430 1","indexId":[4],"import":true,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[{"name":"\u0421\u043b\u043e\u0439
+    11","path":"\u0413\u0440\u0443\u043f\u043f\u0430 1/\u0421\u043b\u043e\u0439 11","indexId":[4,0],"import":true,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[]},{"name":"\u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0439
+    \u0448\u043a\u0430\u0444","path":"\u0413\u0440\u0443\u043f\u043f\u0430 1/\u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0439
+    \u0448\u043a\u0430\u0444","indexId":[4,1],"import":true,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[{"name":"\u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0439
+    \u0448\u043a\u0430\u0444_1","path":"\u0413\u0440\u0443\u043f\u043f\u0430 1/\u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0439
+    \u0448\u043a\u0430\u0444/\u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0439 \u0448\u043a\u0430\u0444_1","indexId":[4,1,0],"import":true,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[]},{"name":"\u043a\u0443\u043a\u043b\u0430
+    ","path":"\u0413\u0440\u0443\u043f\u043f\u0430 1/\u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0439
+    \u0448\u043a\u0430\u0444/\u043a\u0443\u043a\u043b\u0430 ","indexId":[4,1,1],"import":true,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[]},{"name":"\u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0439
+    \u0448\u043a\u0430\u0444_2","path":"\u0413\u0440\u0443\u043f\u043f\u0430 1/\u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0439
+    \u0448\u043a\u0430\u0444/\u043e\u0442\u043a\u0440\u044b\u0442\u044b\u0439 \u0448\u043a\u0430\u0444_2","indexId":[4,1,2],"import":true,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[]}]},{"name":"\u0442\u0435\u043d\u044c","path":"\u0413\u0440\u0443\u043f\u043f\u0430
+    1/\u0442\u0435\u043d\u044c","indexId":[4,2],"import":true,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[]},{"name":"\u0441\u0442\u0443\u043b","path":"\u0413\u0440\u0443\u043f\u043f\u0430
+    1/\u0441\u0442\u0443\u043b","indexId":[4,3],"import":true,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[]},{"name":"\u0434\u0435\u0432\u043e\u0447\u043a\u0430
+    \u043d\u0430 \u0441\u0442\u0443\u043b\u0435","path":"\u0413\u0440\u0443\u043f\u043f\u0430
+    1/\u0434\u0435\u0432\u043e\u0447\u043a\u0430 \u043d\u0430 \u0441\u0442\u0443\u043b\u0435","indexId":[4,4],"import":true,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[]},{"name":"\u0442\u0435\u043d\u044c
+    \u0434\u0435\u0432\u043e\u0447\u043a\u0438","path":"\u0413\u0440\u0443\u043f\u043f\u0430
+    1/\u0442\u0435\u043d\u044c \u0434\u0435\u0432\u043e\u0447\u043a\u0438","indexId":[4,5],"import":false,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[]},{"name":"\u0434\u0435\u0432\u043e\u0447\u043a\u0430","path":"\u0413\u0440\u0443\u043f\u043f\u0430
+    1/\u0434\u0435\u0432\u043e\u0447\u043a\u0430","indexId":[4,6],"import":false,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[]},{"name":"\u043e\u0442\u043a\u0440\u044b\u0442\u0430\u044f
+    \u0434\u0432\u0435\u0440\u044c","path":"\u0413\u0440\u0443\u043f\u043f\u0430
+    1/\u043e\u0442\u043a\u0440\u044b\u0442\u0430\u044f \u0434\u0432\u0435\u0440\u044c","indexId":[4,7],"import":true,"useDefaults":true,"Alignment":"Center","Pivot":{"x":0.5,"y":0.5},"ScaleFactor":"Full","Childs":[]}]}]}}'
+  assetBundleName: 
+  assetBundleVariant: 

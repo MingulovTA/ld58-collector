@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Object = UnityEngine.Object;
 
 public class Game
@@ -97,5 +98,11 @@ public class Game
             _gameState.CheckStates[objectId] = newState;
             OnGameStateUpdate?.Invoke();
         }
+    }
+
+    public void Complete()
+    {
+        Main.I.gameObject.SetActive(false);
+        SceneManager.LoadScene(2);
     }
 }

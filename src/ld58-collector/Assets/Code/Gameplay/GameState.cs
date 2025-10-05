@@ -13,6 +13,8 @@ public class GameState
     {
         {"Bear", "InSitu"},
         {"Picture", "InSitu"},
+        {"Chair_ChildRoom", "Unlocked"}, //Заменить на InSitu
+        {"Chair_Kichen", "Stolen"},
         
         {"Needle", "InSitu"},
         {"Thread", "InSitu"},
