@@ -22,6 +22,11 @@ public class SimpleInteraction : MonoBehaviour, IInteractible
             _pointer.SetActive(true);
     }
 
+    private void OnDisable()
+    {
+        Disable();
+    }
+
     public void Disable()
     {
         if (_pointer!=null)

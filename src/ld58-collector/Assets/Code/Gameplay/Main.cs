@@ -62,10 +62,10 @@ public class Main : MonoBehaviour
             _game.LoadRoom(_game.CurrentRoomView.RoomId);
         
         if (Input.GetKeyDown(KeyCode.F6))
-            _game.SaveCheckPoint();
+            _game.QuickSave();
         
         if (Input.GetKeyDown(KeyCode.F9))
-            _game.LoadCheckpoint();
+            _game.QuickLoad();
     }
     #endif
 }

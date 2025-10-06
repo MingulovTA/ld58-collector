@@ -46,8 +46,24 @@ public class Monster : MonoBehaviour
     {
         gameObject.SetActive(false);
         MonsterStateId = MonsterStateId.Hidding;
-        Main.I.Game.GameState.CheckStates["MonsterHunting"] = "Disabled";
-        Main.I.Game.GameState.CheckStates["ParentSkaf"] = "Breaked";
+        GameState gs = Main.I.Game.GameState;
+        gs.CheckStates["MonsterHunting"] = "Disabled";
+
+        if (gs.TreasuresIds.Contains(TreasuresId.Picture) && !gs.TreasuresIds.Contains(TreasuresId.Flower))
+        {
+            gs.CheckStates["ParentSkaf"] = "Breaked";
+            gs.CheckStates["Dr_Parent_Living"] = "Unlocked";
+        }
+        
+        if (gs.TreasuresIds.Contains(TreasuresId.Flower) && gs.TreasuresIds.Contains(TreasuresId.Flower)
+        && !gs.TreasuresIds.Contains(TreasuresId.Pendant))
+        {
+            gs.CheckStates["Dr_Living_Kitchen"] = "Unlocked";
+        }
+        
+        
+        
+        
         Main.I.MonsterAttackRunner.StopAttackingIfNeed();
     }
 

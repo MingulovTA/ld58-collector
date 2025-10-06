@@ -9,6 +9,7 @@ public class Treasure : MonoBehaviour
     [SerializeField] private Vector3 _newScale = new Vector3(1,1,1);
 
     private Game _game;
+    private bool _used;
     
     private void Awake()
     {
@@ -17,6 +18,8 @@ public class Treasure : MonoBehaviour
 
     public void Add()
     {
+        if (_used) return;
+        _used = true;
         transform.DOScale(_newScale, .5f);
         transform.DOMove(Camera.main.transform.position + Vector3.up * 5, .5f).OnComplete(delegate
         {

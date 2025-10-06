@@ -23,8 +23,14 @@ public class GameState
         {"ParentSkaf", "InSitu"},
         {"ParentSkatulka", "InSitu"},
         {"Book", "InSitu"},
+        {"Dr_Parent_Living", "Locked"},
+        
         
         {"Gramophone", "InSitu"}, //Playing
+        {"Dr_Living_Kitchen", "Locked"},
+        {"Vinyl", "InSitu"},
+        {"Shelf", "InSitu"},
+        {"Flower", "InSitu"},
         
     };
 

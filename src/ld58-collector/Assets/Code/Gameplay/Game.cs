@@ -132,4 +132,19 @@ public class Game
         _gameState.PlayerY = Main.I.Girl.transform.position.y;
         _checkPointStr = JsonConvert.SerializeObject(_gameState);
     }
+    
+    public void QuickLoad()
+    {
+        _gameState = JsonConvert.DeserializeObject<GameState>(PlayerPrefs.GetString("quick-save"));
+        LoadRoom(_gameState.CurrentRoomId);
+        Main.I.Girl.TeleportToCheckPoint();
+        OnGameStateUpdate?.Invoke();
+    }
+
+    public void QuickSave()
+    {
+        _gameState.PlayerX = Main.I.Girl.transform.position.x;
+        _gameState.PlayerY = Main.I.Girl.transform.position.y;
+        PlayerPrefs.SetString("quick-save",JsonConvert.SerializeObject(_gameState));
+    }
 }
