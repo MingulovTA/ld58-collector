@@ -11,6 +11,7 @@ public class Main : MonoBehaviour
     [SerializeField] private FadeScreenService _fadeScreenService;
     [SerializeField] private DialogService _dialogService;
     [SerializeField] private MonsterAttackRunner _monsterAttackRunner;
+    [SerializeField] private SoundService _soundService;
     
     private InputService _inputService;
     private ICoroutineRunner _coroutineRunner;
@@ -24,6 +25,7 @@ public class Main : MonoBehaviour
     public FadeScreenService FadeScreenService => _fadeScreenService;
     public DialogService DialogService => _dialogService;
     public MonsterAttackRunner MonsterAttackRunner => _monsterAttackRunner;
+    public SoundService SoundService => _soundService;
 
 
     private void Awake()

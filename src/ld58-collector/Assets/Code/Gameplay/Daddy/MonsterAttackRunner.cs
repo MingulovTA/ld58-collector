@@ -9,7 +9,10 @@ public class MonsterAttackRunner : MonoBehaviour
     public void TryToRun()
     {
         if (Main.I.Game.GameState.CheckStates["MonsterHunting"] == "Enabled")
+        {
+            Main.I.SoundService.PlayMusic("Hunting");
             _huntingAnimation = StartCoroutine(RunAnimation());
+        }
     }
 
     private IEnumerator RunAnimation()

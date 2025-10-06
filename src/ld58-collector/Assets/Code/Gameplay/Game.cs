@@ -34,6 +34,7 @@ public class Game
     {
         Main.I.Monster.gameObject.SetActive(false);
         LoadRoom(RoomId.ChildrenRoom);
+        Main.I.SoundService.PlayMusic("Game");
         SaveCheckPoint();
     }
 
@@ -113,6 +114,7 @@ public class Game
 
     public void Complete()
     {
+        Main.I.SoundService.StopMusic();
         Main.I.gameObject.SetActive(false);
         SceneManager.LoadScene(2);
     }
@@ -124,6 +126,7 @@ public class Game
         LoadRoom(_gameState.CurrentRoomId);
         Main.I.Girl.TeleportToCheckPoint();
         OnGameStateUpdate?.Invoke();
+        Main.I.SoundService.PlayMusic("Game");
     }
 
     public void SaveCheckPoint()

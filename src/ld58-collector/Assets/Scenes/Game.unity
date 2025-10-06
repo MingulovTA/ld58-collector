@@ -200,6 +200,7 @@ MonoBehaviour:
   _fadeScreenService: {fileID: 41709930}
   _dialogService: {fileID: 1259339810}
   _monsterAttackRunner: {fileID: 1034910028}
+  _soundService: {fileID: 1691572600}
 --- !u!4 &73342673
 Transform:
   m_ObjectHideFlags: 0
@@ -1084,9 +1085,9 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 67e6d0c8b1f22294190c1332aa1d834a, type: 3}
   m_Resource: {fileID: 8300000, guid: 67e6d0c8b1f22294190c1332aa1d834a, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -3144,6 +3145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1691572599}
+  - component: {fileID: 1691572600}
   m_Layer: 0
   m_Name: SoundService
   m_TagString: Untagged
@@ -3168,6 +3170,21 @@ Transform:
   - {fileID: 730655101}
   m_Father: {fileID: 73342673}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1691572600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691572598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ff7d118c03a61e4c9840329e5ef3a90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _musics:
+  - {fileID: 2033267231}
+  - {fileID: 730655102}
 --- !u!1 &1721546228
 GameObject:
   m_ObjectHideFlags: 0
@@ -3639,9 +3656,9 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 1dcd337ad7f598f429cfa7a579e8a6ea, type: 3}
   m_Resource: {fileID: 8300000, guid: 1dcd337ad7f598f429cfa7a579e8a6ea, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

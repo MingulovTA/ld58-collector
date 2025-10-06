@@ -75,6 +75,7 @@ public class Monster : MonoBehaviour
                 Time.deltaTime * _speed);
             if (Vector2.Distance(transform.position, Main.I.Girl.transform.position) < .5f)
             {
+                //Main.I.SoundService.StopMusic();
                 Kill();
             }
         }
@@ -84,6 +85,7 @@ public class Monster : MonoBehaviour
                 Time.deltaTime * _speed);
             if (Vector2.Distance(transform.position, SpawnPoint.position) < .5f)
             {
+                Main.I.SoundService.PlayMusic("Game");
                 StopAttacking();
             }
         }
