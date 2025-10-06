@@ -47,6 +47,7 @@ public class DoorView : MonoBehaviour, IInteractible
 
     private IEnumerator Enter()
     {
+        Main.I.SoundService.PlaySfx("wood_door");
         OpenAnim();
         _inputService.AddLocker(this);
         _girl.transform.DOMoveX(transform.position.x, .5f);

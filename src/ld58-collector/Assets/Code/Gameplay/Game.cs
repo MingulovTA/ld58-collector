@@ -89,6 +89,7 @@ public class Game
     {
         if (!_gameState.Inventory.Contains(itemId))
         {
+            Main.I.SoundService.PlaySfx("item_pick_up");
             _gameState.Inventory.Add(itemId);
             OnGameStateUpdate?.Invoke();
         }

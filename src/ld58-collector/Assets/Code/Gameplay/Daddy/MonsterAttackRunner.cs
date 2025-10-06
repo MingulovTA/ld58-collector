@@ -11,6 +11,7 @@ public class MonsterAttackRunner : MonoBehaviour
         if (Main.I.Game.GameState.CheckStates["MonsterHunting"] == "Enabled")
         {
             Main.I.SoundService.PlayMusic("Hunting");
+            Main.I.SoundService.PlaySfx("monster_enter");
             _huntingAnimation = StartCoroutine(RunAnimation());
         }
     }

@@ -20,6 +20,7 @@ public class Treasure : MonoBehaviour
     {
         if (_used) return;
         _used = true;
+        Main.I.SoundService.PlaySfx("item_pick_up");
         transform.DOScale(_newScale, .5f);
         transform.DOMove(Camera.main.transform.position + Vector3.up * 5, .5f).OnComplete(delegate
         {

@@ -14,6 +14,7 @@ public class Monster : MonoBehaviour
         SpawnPoint = spawnPoint;
         transform.position = new Vector3(spawnPoint.position.x,spawnPoint.position.y,transform.position.z);
         gameObject.SetActive(true);
+        Main.I.SoundService.PlaySfx("wood_door");
     }
     private void Update()
     {
@@ -26,6 +27,7 @@ public class Monster : MonoBehaviour
     private void Kill()
     {
         MonsterStateId = MonsterStateId.Killing;
+        Main.I.SoundService.PlaySfx("scream_girl");
         StartCoroutine(KillYield());
     }
 
@@ -34,6 +36,7 @@ public class Monster : MonoBehaviour
         Main.I.InputService.AddLocker(this);
         yield return new WaitForSeconds(.5f);
         yield return Main.I.FadeScreenService.FadeIn(.5f);
+        yield return new WaitForSeconds(2);
         Main.I.InputService.RemoveLocker(this);
         if (Main.I.Game.IsCollectedAllTreasures)
             Main.I.Game.Complete();

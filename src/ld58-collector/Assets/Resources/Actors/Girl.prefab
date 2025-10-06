@@ -946,8 +946,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7075266821556818704, guid: 68c42767e749ece4fba55c0effc0213d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8668717921382137789}
   m_SourcePrefab: {fileID: 100100000, guid: 68c42767e749ece4fba55c0effc0213d, type: 3}
+--- !u!1 &1935574997767972156 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7075266821556818704, guid: 68c42767e749ece4fba55c0effc0213d, type: 3}
+  m_PrefabInstance: {fileID: 8713601631974209068}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8668717921382137789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935574997767972156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89e0f5aca66a71648ad857c02abccb06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sfxId: girl_steps
 --- !u!4 &2991776124436849490 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5865940766229763454, guid: 68c42767e749ece4fba55c0effc0213d, type: 3}

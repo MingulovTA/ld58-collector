@@ -14,6 +14,7 @@ public class Bed : MonoBehaviour
     
     public void Hide()
     {
+        Main.I.SoundService.PlaySfx("hide");
         _hiddenGirl.SetActive(true);
         Main.I.Girl.gameObject.SetActive(false);
         _isHidden = true;
@@ -22,6 +23,7 @@ public class Bed : MonoBehaviour
 
     public void Out()
     {
+        Main.I.SoundService.PlaySfx("hide");
         _hiddenGirl.SetActive(false);
         Main.I.Girl.gameObject.SetActive(true);
         _isHidden = false;
