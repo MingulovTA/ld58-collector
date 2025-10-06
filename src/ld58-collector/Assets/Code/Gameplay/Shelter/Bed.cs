@@ -30,7 +30,7 @@ public class Bed : MonoBehaviour
 
     private void Update()
     {
-        if (_isHidden && Main.I.Game.GameState.CheckStates["MonsterHunting"] == "Disabled")
+        if (_isHidden && !Main.I.Monster.gameObject.activeSelf)
         {
             if (Input.GetKeyDown(KeyCode.Return)||Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.E))
                 Out();

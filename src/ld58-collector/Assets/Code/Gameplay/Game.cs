@@ -32,11 +32,14 @@ public class Game
 
     public void Run()
     {
+        Main.I.Monster.gameObject.SetActive(false);
         LoadRoom(RoomId.ChildrenRoom);
+        SaveCheckPoint();
     }
 
     public void LoadRoom(RoomId newRoom)
     {
+        Main.I.MonsterAttackRunner.StopAttackingIfNeed();
         if (_currentRoomView != null)
         {
             _lastRoomId = _currentRoomView.RoomId;
@@ -61,6 +64,7 @@ public class Game
         }
 
         _coroutineRunner.Run(FadeOut(doorView));
+        Main.I.MonsterAttackRunner.TryToRun();
     }
 
     private IEnumerator FadeOut(DoorView doorView)

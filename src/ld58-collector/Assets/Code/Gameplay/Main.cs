@@ -43,6 +43,7 @@ public class Main : MonoBehaviour
         _coroutineRunner = GetCoroutineRunner();
         _game = new Game(_coroutineRunner);
         _game.Run();
+        
     }
     
     private ICoroutineRunner GetCoroutineRunner()

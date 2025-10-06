@@ -28,7 +28,7 @@ public class RoomView : MonoBehaviour
         _camPos = Camera.main.transform.position;
         UpdateCameraHalfWidth();
     }
-
+    
     private void LateUpdate()
     {
         if (!_isCameraFollow)

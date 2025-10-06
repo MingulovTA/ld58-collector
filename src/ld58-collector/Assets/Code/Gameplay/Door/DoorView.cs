@@ -8,8 +8,10 @@ public class DoorView : MonoBehaviour, IInteractible
     [SerializeField] private GameObject _opened;
     [SerializeField] private GameObject _closed;
     [SerializeField] private GameObject _pointer;
+    [SerializeField] private bool _isMonsterDoor;
 
     public RoomId NextRoom => _nextRoom;
+    public bool IsMonsterDoor => _isMonsterDoor;
 
     private InputService _inputService;
     private Game _game;

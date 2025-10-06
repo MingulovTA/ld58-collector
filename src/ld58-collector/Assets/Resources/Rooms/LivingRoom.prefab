@@ -304,6 +304,7 @@ MonoBehaviour:
   _opened: {fileID: 7700845170427443492}
   _closed: {fileID: 6454446348060803647}
   _pointer: {fileID: 7729225270678681773}
+  _isMonsterDoor: 0
 --- !u!65 &3151794217069293160
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -377,6 +378,7 @@ MonoBehaviour:
   _opened: {fileID: 7207472601872545801}
   _closed: {fileID: 8441973812322012323}
   _pointer: {fileID: 4204866215967121584}
+  _isMonsterDoor: 1
 --- !u!65 &69395764387587461
 BoxCollider:
   m_ObjectHideFlags: 0

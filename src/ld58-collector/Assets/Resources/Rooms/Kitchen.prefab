@@ -1791,6 +1791,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _title: 
   _message: "Too high\u2026 I can\u2019t reach it."
+  _dialogActorId: 0
 --- !u!114 &6768981988936927694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1857,6 +1858,7 @@ MonoBehaviour:
   _opened: {fileID: 8213542819710160965}
   _closed: {fileID: 3538965605771979273}
   _pointer: {fileID: 6081818231787466786}
+  _isMonsterDoor: 1
 --- !u!65 &2656090541933466115
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -8,6 +8,13 @@ public class Monster : MonoBehaviour
     public Transform SpawnPoint;
     public MonsterStateId MonsterStateId;
 
+    public void StartHunting(Transform spawnPoint)
+    {
+        MonsterStateId = MonsterStateId.Hunting;
+        SpawnPoint = spawnPoint;
+        transform.position = new Vector3(spawnPoint.position.x,spawnPoint.position.y,transform.position.z);
+        gameObject.SetActive(true);
+    }
     private void Update()
     {
         if (MonsterStateId == MonsterStateId.Hunting)
@@ -19,7 +26,7 @@ public class Monster : MonoBehaviour
     private void Kill()
     {
         MonsterStateId = MonsterStateId.Killing;
-        
+        StartCoroutine(KillYield());
     }
 
     private IEnumerator KillYield()
@@ -35,16 +42,20 @@ public class Monster : MonoBehaviour
         //Проиграть звук
     }
     
-    private void Hide()
+    private void StopAttacking()
     {
+        gameObject.SetActive(false);
         MonsterStateId = MonsterStateId.Hidding;
+        Main.I.Game.GameState.CheckStates["MonsterHunting"] = "Disabled";
+        Main.I.MonsterAttackRunner.StopAttackingIfNeed();
     }
 
     private void Hunting()
     {
         if (Main.I.Girl.gameObject.activeSelf)
         {
-            transform.position = Vector3.MoveTowards(transform.position, Main.I.Girl.transform.position,
+            Vector3 target = Main.I.Girl.transform.position;
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(target.x,target.y,transform.position.z), 
                 Time.deltaTime * _speed);
             if (Vector2.Distance(transform.position, Main.I.Girl.transform.position) < .5f)
             {
@@ -53,11 +64,11 @@ public class Monster : MonoBehaviour
         }
         else
         {
-            transform.position = Vector3.MoveTowards(transform.position, SpawnPoint.position,
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(SpawnPoint.position.x,SpawnPoint.position.y,transform.position.z), 
                 Time.deltaTime * _speed);
-            if (Vector2.Distance(transform.position, Main.I.Girl.transform.position) < .5f)
+            if (Vector2.Distance(transform.position, SpawnPoint.position) < .5f)
             {
-                Hide();
+                StopAttacking();
             }
         }
     }

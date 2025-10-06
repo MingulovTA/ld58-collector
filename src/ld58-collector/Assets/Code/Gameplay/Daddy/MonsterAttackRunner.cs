@@ -1,16 +1,39 @@
+using System.Collections;
+using System.Linq;
 using UnityEngine;
 
 public class MonsterAttackRunner : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private Coroutine _huntingAnimation;
+    
+    public void TryToRun()
     {
-        
+        if (Main.I.Game.GameState.CheckStates["MonsterHunting"] == "Enabled")
+            _huntingAnimation = StartCoroutine(RunAnimation());
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator RunAnimation()
     {
-        
+        var monsterDoor =  Main.I.Game.CurrentRoomView.DoorsViews.First(dv => dv.IsMonsterDoor == true);
+
+        for (int i = 0; i <= 3; i++)
+        {
+            yield return Main.I.FadeScreenService.FadeOut(.5f);
+        }
+        monsterDoor.OpenAnim();
+        yield return new WaitForSeconds(.25f);
+        Main.I.Monster.StartHunting(monsterDoor.transform);
+        yield return new WaitForSeconds(.25f);
+        monsterDoor.CloseAnim();
+    }
+    
+    public void StopAttackingIfNeed()
+    {
+        if (Main.I.Game.GameState.CheckStates["MonsterHunting"]=="Enabled")
+        {
+            if (_huntingAnimation!=null)
+                StopCoroutine(_huntingAnimation);
+        }
+        Main.I.Monster.gameObject.SetActive(false);
     }
 }

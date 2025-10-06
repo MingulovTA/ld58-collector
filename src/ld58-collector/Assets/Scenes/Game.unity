@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _girl: {fileID: 1285951665}
-  _monster: {fileID: 0}
+  _monster: {fileID: 1111602448}
   _fadeScreenService: {fileID: 41709930}
   _dialogService: {fileID: 1259339810}
   _monsterAttackRunner: {fileID: 1034910028}
@@ -1498,7 +1498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2373676167491250171, guid: a8b41de3dac314d43987cb0d45dbc111, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 2373676167491250171, guid: a8b41de3dac314d43987cb0d45dbc111, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1534,7 +1534,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6721334064613451596, guid: a8b41de3dac314d43987cb0d45dbc111, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1621,6 +1621,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1085558465}
   m_CullTransparentMesh: 1
+--- !u!114 &1111602448 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4285237590849553877, guid: a8b41de3dac314d43987cb0d45dbc111, type: 3}
+  m_PrefabInstance: {fileID: 1070792413}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2fb82087398ca43bed5a6c607bf39c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1124128581
 GameObject:
   m_ObjectHideFlags: 0
