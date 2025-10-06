@@ -16,10 +16,13 @@ public class MonsterAttackRunner : MonoBehaviour
     {
         var monsterDoor =  Main.I.Game.CurrentRoomView.DoorsViews.First(dv => dv.IsMonsterDoor == true);
 
-        for (int i = 0; i <= 3; i++)
+        for (int i = 0; i <= 5; i++)
         {
-            yield return Main.I.FadeScreenService.FadeOut(.5f);
+            yield return Main.I.FadeScreenService.FadeOut(Random.Range(0.05f,0.1f));
+            yield return new WaitForSeconds(Random.Range(0.05f,0.1f));
         }
+        
+        
         monsterDoor.OpenAnim();
         yield return new WaitForSeconds(.25f);
         Main.I.Monster.StartHunting(monsterDoor.transform);
