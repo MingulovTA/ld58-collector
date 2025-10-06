@@ -46,7 +46,7 @@ public class CutscenePage : MonoBehaviour
     public IEnumerator Ready()
     {
         _isReady = true;
-        yield return new WaitForSeconds(8);
+        yield return new WaitForSeconds(7);
         Complete();
     }
 
