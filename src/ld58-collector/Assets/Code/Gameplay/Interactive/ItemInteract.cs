@@ -41,4 +41,9 @@ public class ItemInteract : MonoBehaviour, IInteractible
         if (_pointer!=null)
             _pointer.SetActive(false);
     }
+
+    public bool IsActive()
+    {
+        return gameObject.activeSelf && gameObject.activeInHierarchy;
+    }
 }

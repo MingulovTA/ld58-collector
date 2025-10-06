@@ -66,4 +66,9 @@ public class DoorView : MonoBehaviour, IInteractible
         _opened.SetActive(true);
         _closed.SetActive(false);
     }
+    
+    public bool IsActive()
+    {
+        return gameObject.activeSelf && gameObject.activeInHierarchy;
+    }
 }

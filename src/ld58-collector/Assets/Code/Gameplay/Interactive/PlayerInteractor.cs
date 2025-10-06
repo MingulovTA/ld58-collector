@@ -35,7 +35,7 @@ public class PlayerInteractor : MonoBehaviour
     {
         if (_inputService.GetKeyDown(KeyCode.Return) || _inputService.GetKeyDown(KeyCode.E) || _inputService.GetKeyDown(KeyCode.Space))
         {
-            if (_target != null)
+            if (_target != null&&_target.IsActive())
                 _target.Intecact(this);
         }
     }

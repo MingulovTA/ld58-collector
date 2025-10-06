@@ -32,6 +32,9 @@ public class GameState
         {"Shelf", "InSitu"},
         {"Flower", "InSitu"},
         
+        {"Doll", "InSitu"},
+        {"Dr_Kitchen_Living", "Unlocked"},
+        
     };
 
     public List<ItemId> Inventory = new List<ItemId>();
