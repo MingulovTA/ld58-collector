@@ -4,6 +4,7 @@ public class DialogMessage : MonoBehaviour
 {
     [SerializeField] private string _title;
     [SerializeField] private string _message;
+    [SerializeField] private DialogActorId _dialogActorId;
 
     private DialogService _dialogService;
     private InputService _inputService;
@@ -18,7 +19,7 @@ public class DialogMessage : MonoBehaviour
     {
         Debug.Log("say");
         _inputService.AddLocker(this);
-        _dialogService.Show(_message,_title, OnComplete);
+        _dialogService.Show(_message,_title, _dialogActorId, OnComplete);
     }
 
     private void OnComplete()

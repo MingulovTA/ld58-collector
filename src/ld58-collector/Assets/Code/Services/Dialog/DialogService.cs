@@ -1,5 +1,7 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using ArpaSubmodules.ArpaCommon.General.Extentions.Tween;
 using DG.Tweening;
 using UnityEngine;
@@ -11,12 +13,14 @@ public class DialogService : MonoBehaviour
     [SerializeField] private Text _text;
     [SerializeField] private Image _bg;
     [SerializeField] private Canvas _canvas;
+    [SerializeField] private List<DialogIcon> _dialogIcons;
 
     private Action _onHide;
     private Coroutine _coroutine;
     private Tween _bgAlphaTween;
     private Tween _titleTween;
-
+    private DialogIcon _dialogIcon;
+    
     private string _textText;
     private bool _isShowing;
     private bool _isShowed;
@@ -26,8 +30,17 @@ public class DialogService : MonoBehaviour
         _canvas.gameObject.SetActive(false);
     }
     
-    public void Show(string text, string title, Action onHide = null)
+    public void Show(string text, string title, DialogActorId dialogActorId, Action onHide = null)
     {
+        foreach (var dialogIcon in _dialogIcons)
+            dialogIcon.gameObject.SetActive(dialogIcon.DialogActorId==dialogActorId);
+
+        _dialogIcon = _dialogIcons.FirstOrDefault(di => di.DialogActorId == dialogActorId);
+
+        if (_dialogIcon != null)
+            _dialogIcon.Image.SetAlpha(0);
+        
+        
         _canvas.gameObject.SetActive(true);
         _textText = text;
         _text.text = "";
@@ -40,6 +53,9 @@ public class DialogService : MonoBehaviour
             _coroutine = null;
         }
 
+        _bg.SetAlpha(0);
+        _text.text = "";
+        
         if (string.IsNullOrEmpty(text))
         {
             _bg.SetAlpha(0);
@@ -61,6 +77,8 @@ public class DialogService : MonoBehaviour
         _textTitle.SetAlpha(0);
         _bgAlphaTween = _bg.SetAlpha(.5f, 0.25f);
         _titleTween = _textTitle.SetAlpha(1, 0.25f);
+        if (_dialogIcon != null)
+            _dialogIcon.Image.SetAlpha(1,.25f);
         yield return new WaitForSeconds(0.1f);
         string outText = "";
         for (var i = 0; i < text.Length; i++)
@@ -93,6 +111,7 @@ public class DialogService : MonoBehaviour
             StartCoroutine(Hide());
             _isShowed = false;
         }
+
     }
 
     public IEnumerator Hide()
@@ -100,6 +119,8 @@ public class DialogService : MonoBehaviour
         _bgAlphaTween.Kill();
         _titleTween.Kill();
         _bg.SetAlpha(0.25f);
+        if (_dialogIcon != null)
+            _dialogIcon.Image.SetAlpha(0,.25f);
         _bgAlphaTween = _bg.SetAlpha(0, .25f);
         _titleTween = _textTitle.SetAlpha(0, .25f);
         _text.text = "";
