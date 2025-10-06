@@ -4,20 +4,50 @@ using UnityEngine;
 public class Monster : MonoBehaviour
 {
     [SerializeField] private Transform _view;
+    [SerializeField] private Animator _animator;
     [SerializeField] private float _speed = 5;
     public Transform SpawnPoint;
     public MonsterStateId MonsterStateId;
 
     public void StartHunting(Transform spawnPoint)
     {
+        
         MonsterStateId = MonsterStateId.Hunting;
         SpawnPoint = spawnPoint;
         transform.position = new Vector3(spawnPoint.position.x,spawnPoint.position.y,transform.position.z);
         gameObject.SetActive(true);
+        _animator.SetBool("b_walk", true);
         Main.I.SoundService.PlaySfx("wood_door");
     }
+
+    private Vector3 _lastPosition;
+    private bool _isRight;
+
+    private void TurnRight()
+    {
+        //if (_isRight) return;
+        _view.transform.localScale = new Vector3(1, 1, 1);
+    }
+
+    private void TurnLeft()
+    {
+        //if (!_isRight) return;
+        _view.transform.localScale = new Vector3(-1, 1, 1);
+    }
+    
+    
     private void Update()
     {
+        if (transform.position.x > _lastPosition.x)
+        {
+            TurnRight();
+        }
+        else
+        {
+            TurnLeft();
+        }
+        
+        _lastPosition = transform.position;
         if (MonsterStateId == MonsterStateId.Hunting)
         {
             Hunting();
@@ -26,6 +56,7 @@ public class Monster : MonoBehaviour
 
     private void Kill()
     {
+        _animator.SetBool("b_walk", false);
         MonsterStateId = MonsterStateId.Killing;
         Main.I.SoundService.PlaySfx("scream_girl");
         StartCoroutine(KillYield());

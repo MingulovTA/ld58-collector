@@ -3385,7 +3385,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _title: 
   _message: Hey, Lily, what about some music? Just bring me a record.
-  _dialogActorId: 1
+  _dialogActorId: 6
   _onComplete:
     m_PersistentCalls:
       m_Calls: []
