@@ -47,6 +47,7 @@ public class Monster : MonoBehaviour
         gameObject.SetActive(false);
         MonsterStateId = MonsterStateId.Hidding;
         Main.I.Game.GameState.CheckStates["MonsterHunting"] = "Disabled";
+        Main.I.Game.GameState.CheckStates["ParentSkaf"] = "Breaked";
         Main.I.MonsterAttackRunner.StopAttackingIfNeed();
     }
 
