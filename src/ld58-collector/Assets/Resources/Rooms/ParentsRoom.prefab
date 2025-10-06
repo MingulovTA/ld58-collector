@@ -222,6 +222,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2047121611324271878}
+  - {fileID: 5049365027003799676}
   m_Father: {fileID: 5834221159547056161}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3233117493159595947
@@ -274,6 +275,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 130204472186470534}
+  - {fileID: 1089071768536580252}
   m_Father: {fileID: 2882979008134185111}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &416207618415003145
@@ -382,6 +384,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2014196855101812775}
         m_TargetAssemblyTypeName: SqmChangeState, Assembly-CSharp
         m_MethodName: Run
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3387620259774589270}
+        m_TargetAssemblyTypeName: DialogMessage, Assembly-CSharp
+        m_MethodName: Say
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -539,6 +553,57 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1577859060080684921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1089071768536580252}
+  - component: {fileID: 3387620259774589270}
+  m_Layer: 0
+  m_Name: dialog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1089071768536580252
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577859060080684921}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8983624327866897802}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3387620259774589270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577859060080684921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c47810469707341b466b21843cbc11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _title: 
+  _message: "Hi, Lily! Sorry, I\u2019m not feeling too well. Lately, I feel like
+    I don\u2019t belong here\u2026"
+  _dialogActorId: 4
+  _onComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1755964418981324776
 GameObject:
   m_ObjectHideFlags: 0
@@ -1233,6 +1298,56 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3, y: 5, z: 5}
   m_Center: {x: 0, y: 2, z: 0}
+--- !u!1 &4647697632779654092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 101327070920280535}
+  - component: {fileID: 4475742048254172181}
+  m_Layer: 0
+  m_Name: failedDialog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &101327070920280535
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4647697632779654092}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2047121611324271878}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4475742048254172181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4647697632779654092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c47810469707341b466b21843cbc11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _title: 
+  _message: "I won\u2019t open up just like that\u2026 I need a song."
+  _dialogActorId: 3
+  _onComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4906768667425748629
 GameObject:
   m_ObjectHideFlags: 0
@@ -1448,6 +1563,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _objectId: Pendant
   _newState: PickedUp
+--- !u!1 &5150896299693152963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4809637970188447966}
+  - component: {fileID: 5349750991971266958}
+  m_Layer: 0
+  m_Name: dialog1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4809637970188447966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5150896299693152963}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8196054407443778575}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5349750991971266958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5150896299693152963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c47810469707341b466b21843cbc11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _title: 
+  _message: "Mommy loved to embroider \u2014 she made so many beautiful pictures!"
+  _dialogActorId: 1
+  _onComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5172042026400598741
 GameObject:
   m_ObjectHideFlags: 0
@@ -1812,6 +1977,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2047121611324271878}
   - component: {fileID: 6623337609852429494}
+  - component: {fileID: 9115689240237097688}
+  - component: {fileID: 6101712824907969082}
   m_Layer: 0
   m_Name: "\u0448\u043A\u0430\u0442\u0443\u043B\u043A\u0430 \u043E\u0442\u043A\u0440\u044B\u0442\u0430"
   m_TagString: Untagged
@@ -1831,7 +1998,8 @@ Transform:
   m_LocalPosition: {x: -3.5749998, y: -1.15, z: -1}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 101327070920280535}
   m_Father: {fileID: 9201563142131871787}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6623337609852429494
@@ -1889,6 +2057,55 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &9115689240237097688
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6101567391683241738}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9, y: 0.6, z: 10}
+  m_Center: {x: 0.000000029802322, y: 0, z: 0}
+--- !u!114 &6101712824907969082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6101567391683241738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc8d2b395bddfb24e99c61b299304c4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4475742048254172181}
+        m_TargetAssemblyTypeName: DialogMessage, Assembly-CSharp
+        m_MethodName: Say
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _pointer: {fileID: 8250420614409912590}
 --- !u!1 &6142845157922893865
 GameObject:
   m_ObjectHideFlags: 0
@@ -2043,6 +2260,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2182631600983642367}
+  - {fileID: 4809637970188447966}
   m_Father: {fileID: 1793147891044178430}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2226293395539964972
@@ -2151,6 +2369,18 @@ MonoBehaviour:
       - m_Target: {fileID: 8369946919008458753}
         m_TargetAssemblyTypeName: SqmChangeState, Assembly-CSharp
         m_MethodName: Run
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5349750991971266958}
+        m_TargetAssemblyTypeName: DialogMessage, Assembly-CSharp
+        m_MethodName: Say
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3512,6 +3742,73 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &1686445253997887395
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 9201563142131871787}
+    m_Modifications:
+    - target: {fileID: 5869746916886603743, guid: e565451432a80b84dbca2dd36b360a75, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869746916886603743, guid: e565451432a80b84dbca2dd36b360a75, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869746916886603743, guid: e565451432a80b84dbca2dd36b360a75, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869746916886603743, guid: e565451432a80b84dbca2dd36b360a75, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869746916886603743, guid: e565451432a80b84dbca2dd36b360a75, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869746916886603743, guid: e565451432a80b84dbca2dd36b360a75, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869746916886603743, guid: e565451432a80b84dbca2dd36b360a75, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869746916886603743, guid: e565451432a80b84dbca2dd36b360a75, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869746916886603743, guid: e565451432a80b84dbca2dd36b360a75, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5869746916886603743, guid: e565451432a80b84dbca2dd36b360a75, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7284595297649000109, guid: e565451432a80b84dbca2dd36b360a75, type: 3}
+      propertyPath: m_Name
+      value: Pointer
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e565451432a80b84dbca2dd36b360a75, type: 3}
+--- !u!4 &5049365027003799676 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5869746916886603743, guid: e565451432a80b84dbca2dd36b360a75, type: 3}
+  m_PrefabInstance: {fileID: 1686445253997887395}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8250420614409912590 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7284595297649000109, guid: e565451432a80b84dbca2dd36b360a75, type: 3}
+  m_PrefabInstance: {fileID: 1686445253997887395}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3457903098788015275
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1,10 +1,12 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DialogMessage : MonoBehaviour
 {
     [SerializeField] private string _title;
     [SerializeField] private string _message;
     [SerializeField] private DialogActorId _dialogActorId;
+    [SerializeField] private UnityEvent _onComplete;
 
     private DialogService _dialogService;
     private InputService _inputService;
@@ -25,5 +27,6 @@ public class DialogMessage : MonoBehaviour
     private void OnComplete()
     {
         _inputService.RemoveLocker(this);
+        _onComplete?.Invoke();
     }
 }

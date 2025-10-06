@@ -24,6 +24,8 @@ public class GameState
         {"ParentSkatulka", "InSitu"},
         {"Book", "InSitu"},
         
+        {"Gramophone", "InSitu"}, //Playing
+        
     };
 
     public List<ItemId> Inventory = new List<ItemId>();
