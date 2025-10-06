@@ -55,15 +55,14 @@ public class Monster : MonoBehaviour
             gs.CheckStates["Dr_Parent_Living"] = "Unlocked";
         }
         
-        if (gs.TreasuresIds.Contains(TreasuresId.Flower) && gs.TreasuresIds.Contains(TreasuresId.Flower)
-        && !gs.TreasuresIds.Contains(TreasuresId.Pendant))
+        if (gs.TreasuresIds.Contains(TreasuresId.Picture) 
+            && gs.TreasuresIds.Contains(TreasuresId.Flower)
+            && gs.TreasuresIds.Contains(TreasuresId.Pendant)
+            && !gs.TreasuresIds.Contains(TreasuresId.Doll))
         {
             gs.CheckStates["Dr_Living_Kitchen"] = "Unlocked";
         }
-        
-        
-        
-        
+
         Main.I.MonsterAttackRunner.StopAttackingIfNeed();
     }
 
