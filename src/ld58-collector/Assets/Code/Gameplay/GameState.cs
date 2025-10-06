@@ -11,6 +11,8 @@ public class GameState
 
     public Dictionary<string, string> CheckStates = new Dictionary<string, string>
     {
+        {"MonsterHunting", "Disabled"},
+        
         {"Bear", "InSitu"},
         {"Picture", "InSitu"},
         {"Chair_ChildRoom", "Unlocked"}, //Заменить на InSitu

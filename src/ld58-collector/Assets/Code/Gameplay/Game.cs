@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Linq;
+using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Object = UnityEngine.Object;
@@ -15,6 +16,12 @@ public class Game
 
     public GameState GameState => _gameState;
     public RoomView CurrentRoomView => _currentRoomView;
+
+    public bool IsCollectedAllTreasures => _gameState.TreasuresIds.Contains(TreasuresId.Doll) &&
+                                           _gameState.TreasuresIds.Contains(TreasuresId.Flower) &&
+                                           _gameState.TreasuresIds.Contains(TreasuresId.Pendant) &&
+                                           _gameState.TreasuresIds.Contains(TreasuresId.Picture);
+
     public event Action OnGameStateUpdate;
 
     public Game(ICoroutineRunner coroutineRunner)
@@ -104,5 +111,21 @@ public class Game
     {
         Main.I.gameObject.SetActive(false);
         SceneManager.LoadScene(2);
+    }
+
+    private string _checkPointStr;
+    public void LoadCheckpoint()
+    {
+        _gameState = JsonConvert.DeserializeObject<GameState>(_checkPointStr);
+        LoadRoom(_gameState.CurrentRoomId);
+        Main.I.Girl.TeleportToCheckPoint();
+        OnGameStateUpdate?.Invoke();
+    }
+
+    public void SaveCheckPoint()
+    {
+        _gameState.PlayerX = Main.I.Girl.transform.position.x;
+        _gameState.PlayerY = Main.I.Girl.transform.position.y;
+        _checkPointStr = JsonConvert.SerializeObject(_gameState);
     }
 }

@@ -11,7 +11,7 @@ public class Girl : MonoBehaviour
     
     private int _direction = 1;
     private Vector3 _velocity;
-    
+
     private void Start()
     {
         _girlView.SetState(GirlStateId.Idle);
@@ -54,5 +54,13 @@ public class Girl : MonoBehaviour
         _characterController.enabled = false;
         transform.position = new Vector3(girlSpawnWp.position.x,girlSpawnWp.position.y,transform.position.z);
         _characterController.enabled = true;
+    }
+
+    public void TeleportToCheckPoint()
+    {
+        _characterController.enabled = false;
+        transform.position = new Vector3(Main.I.Game.GameState.PlayerX,Main.I.Game.GameState.PlayerY,transform.position.z);
+        _characterController.enabled = true;
+        gameObject.SetActive(true);
     }
 }

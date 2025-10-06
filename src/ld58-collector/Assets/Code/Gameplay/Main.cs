@@ -7,8 +7,10 @@ public class Main : MonoBehaviour
     public static Main I => _instance;
 
     [SerializeField] private Girl _girl;
+    [SerializeField] private Monster _monster;
     [SerializeField] private FadeScreenService _fadeScreenService;
     [SerializeField] private DialogService _dialogService;
+    [SerializeField] private MonsterAttackRunner _monsterAttackRunner;
     
     private InputService _inputService;
     private ICoroutineRunner _coroutineRunner;
@@ -18,8 +20,10 @@ public class Main : MonoBehaviour
     public ICoroutineRunner CoroutineRunner => _coroutineRunner;
     public Game Game => _game;
     public Girl Girl => _girl;
+    public Monster Monster => _monster;
     public FadeScreenService FadeScreenService => _fadeScreenService;
     public DialogService DialogService => _dialogService;
+    public MonsterAttackRunner MonsterAttackRunner => _monsterAttackRunner;
 
 
     private void Awake()
@@ -53,9 +57,14 @@ public class Main : MonoBehaviour
     #if UNITY_EDITOR
     private void Update()
     {
-        
         if (Input.GetKeyDown(KeyCode.R))
             _game.LoadRoom(_game.CurrentRoomView.RoomId);
+        
+        if (Input.GetKeyDown(KeyCode.F6))
+            _game.SaveCheckPoint();
+        
+        if (Input.GetKeyDown(KeyCode.F9))
+            _game.LoadCheckpoint();
     }
     #endif
 }
